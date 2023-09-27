@@ -13,6 +13,8 @@
           <span class="text-primary float-end">${{ product.price }}.00</span>
           <h5>{{ product }}</h5>
           <p>{{ product.description }}</p>
+          <p>Creado el {{ product.created_at | date:'d/m/y'}}</p>
+          <p>Creado hace {{ product.created_at | timesince }}</p>
           <a
             href="{% url 'shop:product-detail' product.id %}"
             class="btn btn-primary"
